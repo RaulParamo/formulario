@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios y campos	</title>
+
+</head>
+<body>
+	<h2>creando los formularios	</h2>
+<fieldset ><!--agrupa los datos parecidos-->
+	<legend>Tus Datos</legend>
+
+	<form clas="formulario"</form>
+		<label for="nombre">Nombre</label>
+		<input type="text" name="nombre" id="nombre" placeholder="tu nombre " autocomplete="on" required>
+
+		<br><br>
+
+
+		<label for="apellido">Apellido</label>
+		<input type="text" name="apellido" id="apellido" placeholder="tu  primer apellido" autocomplete="on" required>
+
+		<br><br>
+
+		<label for="sexo">Sexo:</label><br>
+		<input type="radio" id="sexo" name="sexo" value="Mujer" checked autofocus>Mujer<br>
+		<input type="radio" id="sexo" name="sexo" value="Hombre">Hombre<br>
+		<input type="radio" id="sexo" name="sexo" value="Otro">Otro<br>
+
+
+		<label>Fecha de cumpleaños</label>
+	<input type="date" name="fecha">
+	<input type="datetime-local" name="fecha">
+
+
+			<br><br>
+
+					<label for="email" required>Correo Electrónico</label><!--para validar informacion-->
+					<input id="email" type="email"name="email" placeholder="correo@dominio.com">
+
+
+			<br><br>
+
+					<label for="URL">Tu sitio WEB</label>
+					<input id="URL"	type="URL"name="sitio WEB" placeholder="www.dominio.com">
+
+			<br><br>
+			
+					<label>Cuanto sabes de HTML</label>	<!--para elegir unrango-->
+					<input type="range" name="puntaje" min="0" max="100">	
+
+			<br><br>
+			
+					<label>personas que vienen contigo</label>	<!--para elegir un numero-->
+					<input type="number" name="cantidad" min="1" max="5">	
+
+
+	       
+		</fieldset>
+
+		<br><br>
+
+		<fieldset>
+			<legend>Información sobre tu curso</legend>
+			<label for="turno">Turno</label><!--esa etiqute aparece para indicarnos que hay que elegir el turno-->
+			<select id="turno"class="turno" name="turno"><!--Se abre una etiqueta "select" y lo que este dentro sera laas opcionesque tendremos dentro de la lista desplegable-->
+			<option value="matutino">Matutino</option>
+				<option value="matutino">Vespertino</option>
+					<option value="nocturno" selected>Nocturno</option><!--"Selected es para elegir uno por default"-->
+					<option value="otro">Otro</option>
+
+				
+
+					</select><br><br>
+
+					<label >¿Qué curso te gustaría que agregaramos?</label>
+
+					<input 	list="propuesta" name="encuesta">
+					<datalist id="propuesta">
+					<option value="jQuery"></option>
+					<option value="Aplicaciones WEB"></option>
+					<option value="Angular JS"></option>
+					<option value="Bootstrap"></option>
+					</datalist>
+					<br><br>
+
+					<label >Elige tus cursos</label> <br>
+					<input type="checkbox" value="php">PHP <br>  	<!--para elegir mas de una opcion-->
+						<input type="checkbox" value="html">HTML <br>	
+						<input type="checkbox" value="php">CSS3 <br>	
+							<input type="checkbox" value="mysql">Mysql <br>
+							<input type="checkbox" value="jquery">jQuery <br><br>
+
+							<label >Fecha en que deseas que incie tu curso</label>	
+							<input type="datetime-local" name="fecha">
+							<input type="month" name="fecha">
+								<input type="time" name="fecha">
+									<input type="week" name="fecha">
+
+		</fieldset>
+	
+<br><br>
+
+<fieldset>
+	<legend>Extra</legend>
+
+	<label>Las primeras 10 personas se llevan una camisa gratis, elige tu color</label><!--elegir colores-->
+	<input type="color" name="color">
+	<br><br>
+
+
+	
+</fieldset>
+
+ <br><br>
+ <fieldset>
+ 	<legend>Usuario y Pasword</legend>
+						<label>Usuario</label>	<!--para elegir usuario--> 	
+						<br>
+					<input type="text" name="usuario" placeholder="usuario" required><br><br>
+					<label>Password</label>	<!--para elegir password-->
+					<br>
+					<input type="password" name="password" placeholder="usuario" required><br>
+</fieldset>
+	<br>
+
+		<input type="submit" value="Enviar">
+		<button type="reset">Borrar	</button><!--se usa para agregar funciones de JS :o-->
+		<button type="submit" value="Enviar" disabled="">Enviar</button><!--Tambien se pueden desabilitar-->
+	</form>
+
+
+
+</html>
